@@ -1,13 +1,18 @@
 language: go
-
 go:
   - 1.8
-
 before_install:
   - go get -t -v ./...
-
 script:
   - go test -coverprofile=coverage.txt -covermode=atomic
-
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+deploy:
+  provider: releases
+  api_key:
+    secure: l5K7RJlG37tDTs0ewsMp2VwPwyB8yIFIUuQmEzh72I0CK4LkmlAfqpHSHiqQbJr5VoxQlJra/VgfZTSgyJ3Pvgf9g9s8TpN/ur7sq2m4sL+LoLUtOfMxN2Gx+bo/+lV5RQfTF75I2xZHBKjQjyfZFVXpenCSP2zy5p64W70oALV0Q0eaoF+wwruYAMoFnMJ2TuTPYGsG13LmB2T88VDxhfzpFxB0ZDQ/vFPN7pS7+81dmalpZYK8YeXEE57G3N6ICB6cbjzj06NhIPRzWBmK9YG6xrijDBdg7UoIE4sX7DCylRYhC66PXo5MKv1Z0EDkYBB7tUbn9iIFqXsNKywSYocv4Cgg59qp2llavpBJ41kuecej3S189If/hXDgQm9Pl/D2RvLakfl4bzlNZKbwU++nRBqW2kFQ+O2UCM4XHxqoF7+2RrL7ISpC8ZZqOfPS76/2AKGBrTMiaO9m0InjZodvgbgSWxvpZ/Iox7J1qDE4MwjW2kN+AZvzaT71hHHsP8VTWQts2BCbrWRN4pfS4tlpHbsMNll/cPFTolk40hIUm+cULMib7fcHiHYKGuCmQ4UbMd8mpe07BScZaWiRDbQg2bARt3XPAVXJ+jqvVBWrLt7/Li7DcdM8/rkn8ifURYtQMBwhq2u9PFh0bo/Z0ZocQb6oJ5gCOb1U8f9AIgk=
+  file: fib
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: sevlyar/fibonacci
