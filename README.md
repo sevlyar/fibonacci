@@ -1,5 +1,7 @@
 # Golang Project Sample - Fibonacci Calculator
 
+[![GoDoc](https://godoc.org/github.com/sevlyar/fibonacci?status.svg)](https://godoc.org/github.com/sevlyar/fibonacci) [![Build Status](https://travis-ci.org/sevlyar/fibonacci.svg?branch=master)](https://travis-ci.org/sevlyar/fibonacci) [![codecov](https://codecov.io/gh/sevlyar/fibonacci/branch/master/graph/badge.svg)](https://codecov.io/gh/sevlyar/fibonacci) [![Go Report Card](https://goreportcard.com/badge/github.com/sevlyar/fibonacci)](https://goreportcard.com/report/github.com/sevlyar/fibonacci) [![Sourcegraph](https://sourcegraph.com/github.com/sevlyar/fibonacci/-/badge.svg)](https://sourcegraph.com/github.com/sevlyar/fibonacci?badge)
+
 *The project is not ready for production. It is still experimental and subject to change.*
 
 Fibonacci Calculator calculates n-th Fibonacci number. It computes Fibonacci numbers in time O(log(n))
