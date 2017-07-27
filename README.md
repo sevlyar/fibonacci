@@ -18,8 +18,13 @@ to calculate Fibonacci numbers using command-line.
 ## Documentation
 
 [godoc.org/github.com/sevlyar/fibonacci](https://godoc.org/github.com/sevlyar/fibonacci)
+[godoc.org/github.com/sevlyar/fibonacci/cmd/fib](https://godoc.org/github.com/sevlyar/fibonacci/cmd/fib)
 
 ## Installation
+
+You can download latest release of the calculator for Darwin_amd64 from [here](https://github.com/sevlyar/fibonacci/releases/latest)
+
+You need [Go distribution](https://golang.org/doc/install) to install project from sources:
 
 	go get github.com/sevlyar/fibonacci
 	go install github.com/sevlyar/fibonacci/...
