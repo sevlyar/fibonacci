@@ -4,9 +4,8 @@ go:
 before_install:
   - go get -t -v ./...
 script:
-  - go install ./...
+  - go build ./cmd/fib
   - go test -coverprofile=coverage.txt -covermode=atomic
-  - ls
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 deploy:
